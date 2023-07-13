@@ -9,4 +9,22 @@ pipeline {
             }
         }
 }
+    stages {
+        stage('Git-Checkout') {
+            steps {
+                sh '''echo \'Installing Node JS\'
+sudo apt install nodejs
+
+echo \'Checking the NodeJS Version\'
+node -v
+
+echo \'Installing NPM\'
+sudo apt install npm
+
+echo \'Checking NPM Version\'
+npm -v
+'''
+            }
+        }
+}
 }
