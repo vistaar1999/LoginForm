@@ -11,6 +11,17 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm install'
+                bat 'npm install express'
+            }
+        }
+        stage('Installing Dependencies') {
+            steps {
+                bat 'npm install express'
+            }
+        }
+        stage('Running Nodejs Server') {
+            steps {
+                bat 'node app.js'
             }
         }
 }
