@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh '''echo \'Installing Node JS\'
+                sh ('''echo \'Installing Node JS\'
 sudo apt install nodejs
 
 echo \'Checking the NodeJS Version\'
@@ -21,7 +21,7 @@ sudo apt install npm
 
 echo \'Checking NPM Version\'
 npm -v
-'''
+''')
             }
         }
 }
