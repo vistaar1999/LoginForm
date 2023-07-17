@@ -22,7 +22,7 @@ pipeline {
                   }
                     bat 'docker push vistaark9/nodejs-container'
                     bat 'docker container create -i -t --name Node-JS vistaark9/nodejs-container'
-                    bat 'docker run -d -p 3000:8080 vistaark9/nodejs-container'
+                    bat 'docker run -d -p 3000:3000 Node-JS'
                     bat 'docker ps'
             }
         }
