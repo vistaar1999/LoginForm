@@ -21,8 +21,8 @@ pipeline {
                     bat "docker login -u vistaark9 -p ${dockerhubpwd}"
                   }
                     bat 'docker push vistaark9/nodejs-container'
-                    bat 'docker container create -i -t --name Node-JS vistaark9/nodejs-container'
-                    bat 'docker run -d -p 3000:3000 Node-JS'
+                    bat 'docker container create -i -t --name nodejs vistaark9/nodejs-container'
+                    bat 'docker run -d -p 3000:3000 nodejs'
                     bat 'docker ps'
             }
         }
